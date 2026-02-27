@@ -16,10 +16,12 @@ public class Expense {
     public String getDescription() { return description; }
     public String getDate() { return date; }
 
+    // Convert expense to a pipe-delimited string for file storage
     public String toFileString() {
         return amount + "|" + category + "|" + description + "|" + date;
     }
 
+    // Recreate an Expense object from a stored file line
     public static Expense fromFileString(String line) {
         String[] parts = line.split("\\|");
         double amount = Double.parseDouble(parts[0]);
