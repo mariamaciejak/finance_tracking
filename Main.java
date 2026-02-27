@@ -2,7 +2,11 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+     
+    // In-memory list of expenses
     static ArrayList<Expense> expenses = new ArrayList<>();
+
+    // File used for persistent storage
     static final String FILE_NAME = "expenses.txt";
 
     public static void main(String[] args) {
@@ -10,8 +14,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
+        // Main menu loop
+
         do {
-            System.out.println("\n=== Personal Finance Tracker ===");
+            System.out.println("\n=== Finance Tracking ===");
             System.out.println("1. Add expense");
             System.out.println("2. View expenses");
             System.out.println("3. Show total spending");
